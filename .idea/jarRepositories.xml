@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="a3b3e64d-d7ea-4250-9d0d-45ccd6bce46b" />
+      <option name="name" value="a3b3e64d-d7ea-4250-9d0d-45ccd6bce46b" />
+      <option name="url" value="https://maven.aliyun.com/repository/central" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="021478b9-55ba-4b6f-b3f5-8c882d20d243" />
+      <option name="name" value="021478b9-55ba-4b6f-b3f5-8c882d20d243" />
+      <option name="url" value="https://maven.aliyun.com/repository/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="fdea286b-5b28-4b6e-9e74-6c4373f94232" />
+      <option name="name" value="fdea286b-5b28-4b6e-9e74-6c4373f94232" />
+      <option name="url" value="https://maven.aliyun.com/repository/releases" />
+    </remote-repository>
+  </component>
+</project>
