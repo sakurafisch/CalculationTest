@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             });
             AlertDialog dialog = builder.create();
             dialog.show();
+        } else {
+            controller.navigate(R.id.titleFragment);
         }
         return super.onSupportNavigateUp();
     }
