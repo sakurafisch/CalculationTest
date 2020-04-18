@@ -32,4 +32,7 @@
     <string name="win_score_message">New Record: %d</string>
     <string name="back_to_title">Back</string>
     <string name="answer_correct_message">Correct! Go On!</string>
+    <string name="quit_dialog_title">Are you sure to quit?</string>
+    <string name="dialog_positive_message">OK</string>
+    <string name="dialog_negative_message">Cancel</string>
 </resources>
