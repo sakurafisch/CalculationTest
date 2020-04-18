@@ -3,6 +3,7 @@ package com.winnerwinter.calculationtest;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -27,13 +28,18 @@ public class MyViewModel extends AndroidViewModel {
         if (!handle.contains(KEY_HIGH_SCORE)) {
             SharedPreferences sharedPreferences = getApplication().getSharedPreferences(SAVE_SHP_DATA_NAME, Context.MODE_PRIVATE);
             handle.set(KEY_HIGH_SCORE, sharedPreferences.getInt(KEY_HIGH_SCORE, 0));
-            handle.set(KEY_LEFT_NUMBER, 0);
-            handle.set(KEY_RIGHT_NUMBER, 0);
-            handle.set(KEY_OPERATOR, "+");
-            handle.set(KEY_ANSWER, 0);
-            handle.set(KEY_CURRENT_SCORE, 0);
         }
+        initHandle(handle);
+        /*generator();*/
         this.handle = handle;
+    }
+
+    public void initHandle(SavedStateHandle handle) {
+        handle.set(KEY_LEFT_NUMBER, 0);
+        handle.set(KEY_RIGHT_NUMBER, 0);
+        handle.set(KEY_OPERATOR, "+");
+        handle.set(KEY_ANSWER, 0);
+        handle.set(KEY_CURRENT_SCORE, 0);
     }
 
     public MutableLiveData<Integer> getLeftNumber() {
@@ -90,8 +96,8 @@ public class MyViewModel extends AndroidViewModel {
     }
 
     public void save() {
-        SharedPreferences shp = getApplication().getSharedPreferences(SAVE_SHP_DATA_NAME, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = shp.edit();
+        SharedPreferences sharedPreferences = getApplication().getSharedPreferences(SAVE_SHP_DATA_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(KEY_HIGH_SCORE, getHighScore().getValue());
         editor.apply();
     }
@@ -113,4 +119,5 @@ public class MyViewModel extends AndroidViewModel {
     public void setWin_flag(boolean win_flag) {
         this.win_flag = win_flag;
     }
+
 }

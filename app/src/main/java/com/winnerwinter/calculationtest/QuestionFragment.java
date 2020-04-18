@@ -98,7 +98,7 @@ public class QuestionFragment extends Fragment {
         binding.buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Integer.valueOf(builder.toString()).intValue() == ((myViewModel.getAnswer().getValue() == null) ? 0 : myViewModel.getAnswer().getValue())) {
+                if (Integer.parseInt(builder.toString()) == ((myViewModel.getAnswer().getValue() == null) ? 0 : myViewModel.getAnswer().getValue())) {
                     myViewModel.answerCorrect();
                     builder.setLength(0);
                     binding.textView9.setText(R.string.answer_correct_message);
