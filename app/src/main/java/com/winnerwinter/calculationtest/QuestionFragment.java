@@ -33,6 +33,7 @@ public class QuestionFragment extends Fragment {
         final MyViewModel myViewModel;
         myViewModel = new ViewModelProvider(requireActivity(), new SavedStateViewModelFactory(requireActivity().getApplication(), requireActivity())).get(MyViewModel.class);
         myViewModel.generator();
+        myViewModel.getCurrentScore().setValue(0);
         final FragmentQuestionBinding binding;
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_question, container, false);
         binding.setData(myViewModel);
