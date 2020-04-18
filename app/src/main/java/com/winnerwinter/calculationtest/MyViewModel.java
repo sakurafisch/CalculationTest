@@ -60,7 +60,7 @@ public class MyViewModel extends AndroidViewModel {
         return handle.getLiveData(KEY_ANSWER);
     }
 
-    private void generator() {
+    public void generator() {
         int LEVEL = 20;  // 难度系数
         Random random = new Random();
         int x, y;
@@ -106,4 +106,11 @@ public class MyViewModel extends AndroidViewModel {
         generator();
     }
 
+    public boolean isWin_flag() {
+        return win_flag;
+    }
+
+    public void setWin_flag(boolean win_flag) {
+        this.win_flag = win_flag;
+    }
 }
