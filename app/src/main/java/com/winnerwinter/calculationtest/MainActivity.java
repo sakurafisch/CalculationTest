@@ -44,4 +44,9 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onSupportNavigateUp();
     }
+
+    @Override
+    public void onBackPressed() {
+        onSupportNavigateUp();
+    }
 }
